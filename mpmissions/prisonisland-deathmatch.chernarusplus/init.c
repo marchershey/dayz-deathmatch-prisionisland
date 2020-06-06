@@ -112,7 +112,7 @@ class CustomMission : MissionServer {
             }
         }
 
-        this.KillAllPlayers()
+        this.KillAllPlayers();
         // delete all items on the ground
         this.CleanUpItems();
         // delete all dead bodies
@@ -304,7 +304,6 @@ class CustomMission : MissionServer {
 
     // when a player dies
     override bool InsertCorpse(Man player) {
-        player.DropAllItems();
 
         PlayerIdentity identity = player.GetIdentity();
         if (identity) {
